@@ -10,7 +10,7 @@ percent_steps_per_dancer = percent_steps_per_day / dancers_number
 wanted_steps_per_day = (percent_steps_per_day * required_steps_per_day) / 100
 
 if wanted_steps_per_day <= (0.13 * required_steps_per_day):
-    print("Yes, they will succeed in that goal! " + '{0:.2f}'.format(percent_steps_per_dancer) + "%.")
+    print(f"Yes, they will succeed in that goal! {percent_steps_per_dancer:0.2f}%.")
 else:
-    print("No, They will not succeed in that goal! "
-          "Required " + '{0:.2f}'.format(percent_steps_per_dancer) + "% steps to be learned per day.")
+    print(f"No, They will not succeed in that goal! "
+          f"Required {percent_steps_per_dancer:0.2f}% steps to be learned per day.")
