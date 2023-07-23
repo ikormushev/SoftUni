@@ -4,7 +4,7 @@ microbus_c, truck_c, train_c = 0, 0, 0 # microbus_cargo, truck_cargo, train_carg
 cargo_tons_sum = 0
 average_price = 0
 
-for i in range(1, cargo_num + 1):
+for _ in range(1, cargo_num + 1):
     cargo_ton = int(input())
     cargo_tons_sum += cargo_ton
     if cargo_ton <= 3:
