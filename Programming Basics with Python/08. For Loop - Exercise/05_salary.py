@@ -15,7 +15,7 @@ for _ in range(tabs_open):
     else:
         continue
     if salary <= 0:
-        print("You have lost your salary")
+        print("You have lost your salary.")
         break
 else:
     print(f"{salary:.0f}")
