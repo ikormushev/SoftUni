@@ -8,8 +8,8 @@ for _ in range(raters_num):
     points += (len(rater_name) * points_rater) / 2
     if points > 1250.5:
         print(f"Congratulations, {actor_name} got a nominee "
-              f"for leading role with {points}!")
+              f"for leading role with {points:.1f}!")
         break
 else:
     points_diff = 1250.5 - points
-    print(f"Sorry, {actor_name} you need {points_diff} more!")
+    print(f"Sorry, {actor_name} you need {points_diff:.1f} more!")
