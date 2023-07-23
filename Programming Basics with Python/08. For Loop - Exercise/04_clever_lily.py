@@ -14,6 +14,6 @@ for i in range(1, age + 1):
 money_diff = abs(money - washing_machine_price)
 
 if money >= washing_machine_price:
-    print(f"Yes! {money_diff}")
+    print(f"Yes! {money_diff:.2f}")
 else:
-    print(f"No! {money_diff}")
+    print(f"No! {money_diff:.2f}")
