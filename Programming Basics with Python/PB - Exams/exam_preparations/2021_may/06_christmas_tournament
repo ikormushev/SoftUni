@@ -1,0 +1,35 @@
+tournament_days = int(input())
+
+total_money_raised = 0
+total_games_won = 0
+total_games_lost = 0
+
+for _ in range(1, tournament_days + 1):
+    money_raised = 0
+    games_won = 0
+    games_lost = 0
+
+    while True:
+        command = input()
+        if command == "Finish":
+            break
+        sport_name = command
+        outcome = input()
+        if outcome == "win":
+            money_raised += 20
+            games_won += 1
+        elif outcome == "lose":
+            games_lost += 1
+
+    if games_won > games_lost:
+        money_raised *= 1.10
+
+    total_money_raised += money_raised
+    total_games_won += games_won
+    total_games_lost += games_lost
+
+if total_games_won > total_games_lost:
+    total_money_raised *= 1.20
+    print(f"You won the tournament! Total raised money: {total_money_raised:.2f}")
+else:
+    print(f"You lost the tournament! Total raised money: {total_money_raised:.2f}")
