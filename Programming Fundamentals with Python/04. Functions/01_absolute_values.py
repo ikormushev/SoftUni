@@ -1,15 +1,10 @@
-numbers = input().split(" ")
-
-new_numbers = []
-
-for i in range(len(numbers)):
-    new_numbers.append(float(numbers[i]))
+numbers = list(map(float, input().split(" ")))
 
 
-def absolute_values():
-    for y in range(len(new_numbers)):
-        new_numbers[y] = abs(new_numbers[y])
-    return new_numbers
+def absolute_values(x):
+    for i in range(len(x)):
+        x[i] = abs(x[i])
+    return x
 
 
-print(absolute_values())
+print(absolute_values(numbers))
