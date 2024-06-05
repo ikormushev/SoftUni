@@ -1,0 +1,32 @@
+h1 {
+    color: palevioletred;
+}
+
+p {
+    font-size: 20px;
+}
+
+.highlight {
+    background-color: bisque;
+    color: rebeccapurple;
+}
+
+#main-title {
+    color: cadetblue;
+}
+
+#special-paragraph {
+    font-style: oblique;
+}
+
+ul {
+    font-style: italic;
+}
+
+li {
+    font-size: 25px;
+}
+
+div {
+    background-color: thistle;
+}
