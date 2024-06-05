@@ -1,0 +1,24 @@
+div {
+    border: 1px;
+    border-color: red;
+    border-style: solid;
+    background-color: blanchedalmond;
+    padding: 20px;
+}
+
+div p{
+    color:palevioletred;
+}
+
+ul > li {
+    list-style-type: upper-roman;
+}
+
+p + p {
+    background-color: whitesmoke;
+}
+
+p ~ span {
+    font-weight: thin;
+    color: red;
+}
