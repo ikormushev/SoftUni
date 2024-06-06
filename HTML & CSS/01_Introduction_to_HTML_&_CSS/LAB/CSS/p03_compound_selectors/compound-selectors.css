@@ -1,0 +1,30 @@
+p.text-highlight {
+    color: rgb(226, 24, 226);
+    font-size: 20px;
+}
+
+div#special{
+    background-color: bisque;
+    color: darkcyan;
+    padding: 10px;
+}
+
+input[type="text"].input-text {
+    border-color: aquamarine;
+    padding: 5px;
+}
+
+.important-item.special-highlight {
+    font-style: italic;
+    padding: 5px;
+}
+
+.items {
+    color:coral;
+    font-weight: bold;
+}
+
+.items.extra {
+    font-style: italic;
+    color: pink;
+}
