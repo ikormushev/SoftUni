@@ -1,0 +1,47 @@
+/* Descendant Selector */
+nav a {
+    color: palevioletred;
+    font-weight: bold;
+}
+
+/* Child Combinator */
+.main-content > section.highlight > article {
+    padding: 5px;
+    font-size: 20px;
+}
+
+/* Adjacent Sibling Combinator */
+section + header {
+    background-color: antiquewhite;
+}
+
+/* General Sibling Combinator */
+div.main-content ~ section.highlight {
+    background-color: wheat;
+}
+
+/* Attribute Selector */
+.contact input[type="text"]{
+    font-weight: bold;
+    padding: 5px;
+}
+
+/* Pseudo-class Selector */
+nav ul li:first-child a {
+    font-size: 25px;
+}
+
+nav ul li:last-child a {
+    font-size: 20px;
+}
+
+/* Pseudo-element Selector */
+section.highlight h1::before {
+    content: ">> ";
+    color: red;
+}
+
+section.highlight h1::after {
+    content: " <<";
+    color: red;
+}
