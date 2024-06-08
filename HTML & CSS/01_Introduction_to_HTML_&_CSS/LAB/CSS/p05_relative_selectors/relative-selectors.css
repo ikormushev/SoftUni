@@ -1,0 +1,28 @@
+/* Descendant Selector */
+section.special-section p {
+    color:aquamarine;
+}
+
+/* Child Selector */
+ul.main-list > li {
+    font-weight: bold;
+}
+
+/* Adjacent Sibling Selector */
+article.highlight + article {
+    background-color: lightcoral;
+}
+
+/* General Sibling Selector */
+h2 ~ p {
+    color:aqua;
+}
+
+li.special-item {
+    color: cadetblue;
+}
+
+/* Combining Relative Selectors for specificity */
+li.special-item + li a {
+    color: greenyellow;
+}
