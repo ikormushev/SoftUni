@@ -1,0 +1,10 @@
+time {
+    font-style: italic;
+    color: silver;
+    padding: 1px;
+}
+
+.author {
+    font-weight: bold;
+    color:grey;
+}
