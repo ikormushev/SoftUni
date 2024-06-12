@@ -1,0 +1,106 @@
+html {
+    box-sizing: border-box;
+    font: 16px/1.5 Helvetica, sans-serif
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+p, ol, ul {
+    padding-bottom: 1.5rem;
+}
+
+ol, ul {
+    padding-left: 1.5rem;
+}
+
+.heading {
+    line-height: 1.2;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-family: Georgia;
+    padding: 0;
+}
+
+h1 {font-size: 2.2em;}
+h2 {font-size: 2em;}
+h3 {font-size: 1.8em;}
+h4 {font-size: 1.6em;}
+h5 {font-size: 1.4em;}
+h6 {font-size: 1.2em;}
+
+p {
+    padding-bottom: 1.5em;
+    margin: 0;
+}
+
+hr {
+    margin: 1.5em 0;
+}
+
+
+ul, ol {
+    padding: 0;
+    margin: 0 0 1.5em 1.5em;
+}
+
+ul li, ol li {
+    list-style-position: inside;
+}
+
+ul ul {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+ul li {
+    list-style-type: square;
+}
+
+ul ul li {
+    list-style-type: disc;
+}
+
+ul ul ul li{
+    list-style-type: circle;
+}
+
+table {
+    width: 100%;
+    text-align: left;
+    border: 1px solid #c5c5c5;
+    border-collapse: collapse;
+    font-family: Helvetica, sans-serif;
+    margin-top: 0.5em;
+    margin-bottom: 1.5rem;
+}
+
+table th {
+    background-color: #c5c5c5;
+}
+
+tr, td, th{
+    border: 1px solid #c5c5c5;
+    padding: 0.3em 0.5em;
+}
+
+
+tbody tr:nth-child(odd) {
+    background-color: #efefef;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+blockquote {
+    font-style: italic;
+    border-left: 4px solid #d8d8d8;
+    margin: 0 0 1.5rem 2rem;
+    padding: 1rem 2rem;
+}
+
+blockquote p:last-of-type {
+    text-align: right;
+}
