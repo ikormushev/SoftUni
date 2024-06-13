@@ -1,0 +1,43 @@
+.box-model {
+    width: 45vw;
+    margin: 3em auto;
+}
+
+.box-model div {
+    text-align: start;
+    border: 1px dashed #5b5b5b;
+    margin: 0 2em 2em 2em;
+}
+
+.box-model div::before {
+    display: block;
+    height: 2em;
+    padding-left: 0.8em;
+}
+
+.margin {
+    background-color: #ff966f;
+}
+.margin::before {
+    content: 'margin';
+}
+
+.border {
+    background-color: #ffe8c6;
+}
+.border::before {
+    content: 'border';
+}
+
+.padding {
+    background-color: #85eb85;
+}
+.padding::before {
+    content: 'padding';
+}
+
+.box-model .content {
+    background-color: #a3d2e2;
+    text-align: center;
+    padding: 1em;
+}
