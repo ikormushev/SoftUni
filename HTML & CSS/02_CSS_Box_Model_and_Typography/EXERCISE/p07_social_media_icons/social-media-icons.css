@@ -1,0 +1,31 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    padding: 2em;
+    margin: 0;
+}
+
+
+.icons li{
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 1em;
+    margin-top: 1em;
+}   
+
+.icons li a  {
+    display: block;
+    background-color: #ebebeb;
+    width: 3em;
+    font-size: 1.2em;
+    text-align: center;
+    line-height: 3em;
+    border-radius: 50%;
+    color: black;
+}

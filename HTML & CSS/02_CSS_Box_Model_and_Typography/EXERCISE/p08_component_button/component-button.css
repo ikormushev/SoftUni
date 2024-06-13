@@ -1,0 +1,62 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font: 14px/1.5 'Lato', sans-serif;
+}
+
+body {
+    padding: 2em;
+}
+
+body, button {
+    font: inherit;
+}
+
+ul li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.button {
+    display: inline-block;
+    margin: 1em 1em 2em 0;
+    border: 1px solid #d8d8d8;
+    border-radius: 0.3em;
+    text-align: center;
+    padding: 1em 1.5em;
+    outline: none;
+    cursor: pointer;
+    font-weight: 510;
+}
+
+button {
+    font-size: 1em;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.button:hover,  .button:focus{
+    background-color: lightblue;
+}
+
+.one, .icon {
+    background-color: #d8d8d8;
+}
+
+.two {
+    background-color: #ff9b00;
+}
+
+.three {
+    background-color: #f9f9cc
+}
+
+.four {
+    background-color: white;
+}

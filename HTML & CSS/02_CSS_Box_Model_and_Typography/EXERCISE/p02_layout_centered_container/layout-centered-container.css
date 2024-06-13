@@ -1,0 +1,26 @@
+* {
+    font: 16px/1.5 Lato, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+body {
+    border: 2px solid #189918;
+    padding: 2em 10em;
+    margin: 0.05em;
+}
+
+.site {
+    border: 2px solid #6363ff;
+    padding: 2em;
+    margin: 0 auto;
+}
+
+header, main, footer {
+    border: 2px solid black;
+    text-align: center;
+    padding: 1.5em 1em;
+}
+
+header, main {
+    margin-bottom: 2em;
+}

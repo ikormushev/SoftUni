@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font: 14px/1.5 'Lato', sans-seriff;
+}
+
+.banner {
+    background-image: url('image1.jpg');
+    min-height: max(30vh, 600px);;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    color: white;
+    transform: translate(-50%, -50%);
+    font-size: 2.4em;
+    text-shadow: 1px 1px 0.3em black;
+}

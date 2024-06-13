@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 16px/1.5 Lato, sans-serif;
+    padding: 2em;
+}
+
+nav.main-tabs li {
+    list-style-type: none;
+    display: block;
+    position: relative;
+    padding-bottom: 0.75em;
+}
+
+nav.main-tabs > ul > li {
+    display: inline-block;
+}
+
+nav.main-tabs ul ul {
+    display: none;
+    position: absolute;
+    top: 100%; /* 100% of the parent -> in this case li*/
+    left: 0%;
+    width: auto;
+}
+
+nav.main-tabs ul ul ul {
+    top: 0;
+    left: 100%;
+    padding-left: 1em;
+}
+
+nav.main-tabs a {
+    text-decoration: none;
+    display: block; /* very important otherwise the tabs will be buggy*/
+    color: palevioletred;
+    background-color: antiquewhite;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+    font-weight: bold;
+    text-align: center;
+}
+
+nav.main-tabs li:hover > a, nav.main-tabs a:hover {
+    background-color: #1679AB;
+    color: white;
+}
+
+nav.main-tabs li:hover > ul {
+    display: block;
+}

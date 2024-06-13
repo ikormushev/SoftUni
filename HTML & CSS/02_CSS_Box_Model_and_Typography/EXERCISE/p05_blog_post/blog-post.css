@@ -1,0 +1,43 @@
+body {
+    padding: 2em;
+    font-family: Lato, sans-serif;
+    margin: 0;
+}
+
+.container {
+    display: block;
+    border-radius: 0.3em;
+    border: 1px solid #c5c5c5;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5em 2em;;
+}
+
+.container header h2 {
+    margin-bottom: 0.25em;
+    font-weight: bold;
+}
+
+.container section p:first-of-type {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+.container section p:not(:last-of-type) {
+    display: block;
+    padding-bottom: 1em;
+}
+
+h3 {
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+}
+
+.end {
+    font-style: italic;
+    font-size: 0.9em;
+    padding-bottom: 1em;
+}
+
+.end time, .end .author {
+    font-weight: bold;
+}
