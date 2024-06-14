@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 2em;
+}
+
+h1 + h2 {
+    padding-top: 1em;
+}
+
+h2 + .flex-container {
+    display: flex;
+    border: 2px solid blue;
+    width: 300px;
+    padding: 1em;
+    margin: 1em 0;
+    align-items: flex-start;
+}
+
+.flex-item {
+    background-color: #eee;
+    padding: 20px;
+    border: 2px solid #000;
+    flex-basis: 300px;
+}
+
+.flex-container.flex-shrink-zero .flex-item {
+    flex-shrink: 0;
+}
+
+.flex-container.flex-shrink-2nd-only .flex-item {
+    flex-shrink: 0;
+}
+
+
+.flex-container.flex-shrink-2nd-only .flex-item:nth-child(2) {
+    flex-shrink: 1;
+}
+

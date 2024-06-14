@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 2em;
+}
+
+h1 + h2 {
+    padding-top: 1em;
+}
+
+h2 + .flex-container {
+    display: flex;
+    border: 2px solid blue;
+    width: 400px;
+    padding: 1em;
+    margin: 1em 0;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.flex-item {
+    background-color: #eee;
+    padding: 20px;
+    border: 2px solid #000;
+}
+
+h2.gap-row + .flex-container {
+    gap: 2em 0;
+}
+
+h2.gap-column + .flex-container {
+    gap: 0 2em;
+}
+
+h2.gap + .flex-container {
+    gap: 2em;
+}
