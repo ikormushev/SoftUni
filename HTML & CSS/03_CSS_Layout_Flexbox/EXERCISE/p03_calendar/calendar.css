@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 14px/1.5 Lato, sans-serif;
+    padding: 2em 4em;
+    background-color: #eee;
+}
+
+.site {
+    background-color: white;
+    margin: 0 auto;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.5);
+    border: 1px solid #eee;
+    overflow: hidden;
+    outline: 2px solid white;
+    border-radius: 0.3em;
+    display: flex;
+    max-width: 1200px;
+}
+
+.site span {
+    border: 1px solid #eee;
+    text-align: center;
+    flex: 1 1 auto;
+    padding: 2em;
+    font-weight: bold;
+}
+
+.site section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.site .week span:nth-of-type(1), .site .week span:nth-last-of-type(3) {
+    flex-basis: 100%;
+}

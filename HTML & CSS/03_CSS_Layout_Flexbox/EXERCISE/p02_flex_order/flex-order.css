@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 14px/1.5 Lato, sans-serif;
+    padding: 2em 4em;
+    background-color: #eee;
+}
+
+section {
+    background-color: white;
+    margin: 0 auto;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.2);
+    border-radius: 0.3em;
+    padding: 2em;
+    display: flex;
+    max-width: 1100px;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+section + section {
+    margin-top: 5em;
+}
+
+header, main, aside, footer {
+    padding: 2em;
+    border: 2px solid #eee;
+    border-radius: 0.3em;
+    flex: 1 1 auto;
+}
+
+.site section > header,
+.site section > footer {
+    flex: 1 1 100%;
+}
+
+.site section > main {
+    flex-grow: 7;
+}
+
+.site section > aside {
+    flex-grow: 3;
+}
+
+.site .second-section > main { order: 3; }
+.site .second-section > footer { order: 4; }

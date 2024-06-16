@@ -1,0 +1,52 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 14px/1.5 Lato, sans-serif;
+    padding: 2em;
+    background-color: #eee;
+}
+
+.site {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery {
+    display: flex;
+    gap: 1.5em;
+    flex-wrap: wrap;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 calc(33.333% - 1em);
+    border: 10px solid #333333;
+    background-color: white;
+    border-radius: 0.3em;
+    padding: 1em;
+    gap: 2em;
+}
+
+figure figcaption {
+    font-style: italic;
+    color: #989898;
+    font-weight: bold;
+}
+
+figure img {
+    border-radius: 0.3em;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.2);
+    max-width: 100%;
+}
+
+.gallery figure .image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 1 auto;
+}
