@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 2em;
+    font: 14px/1.5 Lato, sans-serif;
+    background-color: #eee;
+    min-height: 100vh;
+
+    /* In order for the banner to stay at the top of the page*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.site {
+    padding: 1.5em;
+    background-color: white;
+    border-radius: 0.3em;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.2);
+    max-width: 900px;
+    display: flex;
+    gap: 1em;
+}
+
+.site .media {
+    background-color: #eee;
+    border-radius: 0.3em;
+    flex: 0 0 35%;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.site .media img {
+    width: 100%;
+    height: 100%;
+}
+.site .content .entry {
+    font-size: 1.5em;
+    color: #7e7e7e;
+    font-weight: bold;
+}
+
+.site .content .title {
+    font-size: 2em;
+    margin-bottom: 0.25em;
+}
+
+.site .content .info {
+    opacity: 0.7;
+    padding-bottom: 1.5em;
+}
+
+.site .content .buttons {
+    display: flex;
+    gap: 1.5em;
+}
+
+button {
+    font: 14px/1.5 Lato, sans-serif;
+    padding: 0.5em 1.3em;
+    border: none;
+    border-radius: 0.3em;
+}
+
+.site .content .buttons .button-chat{
+    background-color: #663399;
+    color: white;
+}
+
+.site .content .buttons .button-chat:hover{
+    background-color: white;
+    color: #663399;
+    border: 1px solid #663399;
+}
+
+.site .content .buttons .button-more:hover{
+    background-color: white;
+    border: 1px solid black;
+}
