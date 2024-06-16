@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eee;
+    font: 14px/1.5 Lato, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2em;
+}
+
+.site {
+    border-radius: 0.3em;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.2);
+}
+
+.site section {
+    max-width: 600px;
+    background-color: white;
+    padding: 2em;
+}
+
+.site section h2 {
+    padding-bottom: 1em;
+}
+
+p, ul {
+    padding-bottom: 1.5em;
+}
+ul {
+    padding-left: 2em;
+}
+
+.site section ul li {
+    list-style-type: disc;
+}
