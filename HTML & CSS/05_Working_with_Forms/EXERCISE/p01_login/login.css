@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 14px/1.5 'Lato', sans-serif;
+}
+
+body, input, textarea, select, option {
+    font: inherit;
+}
+
+body {
+    padding: 2em;
+    background-color: #eee;
+}
+
+.login {
+    background-color: white;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.2);
+    border-radius: 0.3em;
+    padding: 2em;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+}
+
+.login fieldset {
+    width: 100%;
+    border: none;
+    border-radius: 0.3em;
+    padding: 2em;
+}
+
+.login legend {
+    font-weight: bold;
+    font-size: 1.8em;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 1.5rem;
+}
+
+.login fieldset .field label {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.login fieldset .field label::after {
+    content: '*';
+    color: red;
+    padding-left: 0.25em;
+}
+
+.login fieldset input {
+    width: 100%;
+    border-radius: 0.3em;
+    border: 2px solid #ccc;
+    padding: 1em 1.5em;
+}
+
+.login fieldset > input {
+    background-color: #ff8c00;
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 1rem;
+    padding: 1em 1.5em;
+}
+
+.login .field {
+    padding-bottom: 1.5em;
+}
+
