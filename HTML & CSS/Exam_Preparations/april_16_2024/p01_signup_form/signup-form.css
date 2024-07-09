@@ -1,0 +1,122 @@
+@import url(https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, input {
+    font: 14px/1.5 'Kode Mono', sans-serif;
+}
+
+body {
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #eee;
+}
+
+.sign-up-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    background-color: #24333c;
+    padding: 2em;
+    max-width: 750px;
+    border-radius: 0.3rem;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.5);
+    font-size: 1.3em;
+}
+
+.sign-up-form header {
+    display: flex;
+}
+
+.sign-up-form header span {
+    flex: 1 1 auto;
+    padding: 0.5em 2em;
+    text-align: center;
+}
+
+.sign-up-form header .sign-up {
+    background-color: #1ab188;
+    color: white;
+    cursor: pointer;
+}
+
+.sign-up-form header .log-in {
+    background-color: #435359;
+    color: white;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.sign-up-form header .log-in:hover {
+    background-color: #179a77;
+    opacity: 1;
+}
+
+.sign-up-form h2 {
+    color: white;
+    text-align: center;
+    font-weight: normal;
+}
+
+.sign-up-form input[type="submit"] {
+    text-align: center;
+    background-color: #1ab188;
+    color: white;
+    font-size: 1.5em;
+    border: none;
+    padding: 0.5rem 2rem;
+    font-weight: bold;
+}
+
+.sign-up-form .form-inputs {
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+.sign-up-form .form-inputs .names {
+    display: flex;
+    gap: 1.5em;
+    border: none;
+}
+
+.sign-up-form .form-inputs .names .field {
+    flex: 1 1 auto;
+}
+
+.sign-up-form .form-inputs .field {
+    position: relative;
+}
+
+.sign-up-form .form-inputs .field:not(:last-child) {
+    padding-bottom: 1.5em;
+}
+.sign-up-form .form-inputs .field input {
+    background-color: transparent;
+    border: 1px solid #a0b3b0;
+    padding: 0.5em 0.5em;
+    line-height: 1;
+    display: block;
+    width: 100%;
+}
+
+.sign-up-form .form-inputs .field label {
+    color: #80999e;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0.3em 0.5em;
+}
+
+.sign-up-form .form-inputs .field label::after {
+    content: "*";
+    color: #1ab188;
+    padding-left: 0.1em;
+}
