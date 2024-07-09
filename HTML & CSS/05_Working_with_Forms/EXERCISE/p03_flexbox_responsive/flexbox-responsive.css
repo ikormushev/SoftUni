@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, input {
+    font: 14px/1.5 'Lato', sans-serif;
+}
+
+body {
+    padding: 2em;
+    background-color: #eee;
+
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    background-color: white;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.2);
+    border-radius: 0.3em;
+    padding: 1em;
+    display: flex;
+    gap: 1em;
+    margin: 0 auto;
+    max-width: 60em;
+    flex-wrap: wrap;
+    flex: 1 1 100%;
+}
+
+form input {
+    border-radius:  0.3em;
+    border: none;
+    font-weight: bold;
+    padding: 1em 1.5em;
+}
+
+form input[type="text"], form input[type="email"] {
+    background-color: #eee;
+}
+
+form input[type="submit"] {
+    background-color: darkorange;
+    color: white;
+}
+
+form input[type="text"] {
+    flex: 1 1 10ch;
+}
+
+form input[type="email"] {
+    flex: 3 1 30ch;
+}
+
+form input[type="submit"] {
+    flex: 1 1 auto;
+}

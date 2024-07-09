@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 14px/1.5 'Lato', sans-serif;
+}
+
+body, input, textarea, select, option {
+    font: inherit;
+}
+
+body {
+    padding: 2em;
+    background-color: #eee;
+}
+
+.login {
+    background-color: white;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.2);
+    border-radius: 0.3em;
+    padding: 2em 2.5em;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 35em;
+    gap: 2em;
+}
+
+h2, legend, label {
+    font-weight: bold;
+}
+
+.login h2 {
+    font-size: 1.8em;
+}
+
+.login legend {
+    padding: 0 1em;
+    margin-left: -1em;
+}
+
+.login fieldset {
+    padding: 1em 2em 2em 2em;
+    border: 2px solid #DDD;
+    border-radius: 0.3em;
+    flex: 1 1 auto;
+}
+
+.login h2 + fieldset legend {
+    margin-bottom: 1.5em;
+}
+
+.login .field {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.login .field label {
+    order: -1;
+}
+
+.login .field .example {
+    color: #666666;
+    font-style: italic;
+    font-weight: 500;
+    padding-bottom: 1.5em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="submit"], 
+input[type="date"] {
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    border-bottom: 2px solid #DDD;
+    font-size: 1.2em;
+    line-height: 1;
+    
+    &:focus {
+        border-color: orange;
+    }
+}
+
+input[type="date"] {
+    border-bottom: 2px solid #DDD;
+    padding-bottom: 0.5em;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 1em 1.5em;
+    border-radius: 0.3em;
+}
+
+input[type="submit"]:focus,
+input[type="submit"]:hover {
+    background: darkorange;
+    color: #fff;
+}

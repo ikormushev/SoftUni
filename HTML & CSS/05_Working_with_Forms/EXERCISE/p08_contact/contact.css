@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 14px/1.5 'Lato', sans-serif;
+}
+
+body, input, textarea, select, option {
+    font: inherit;
+}
+
+body {
+    padding: 2em;
+    background-color: #eee;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    background-color: white;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.2);
+    border-radius: 0.3em;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    width: 500px;
+}
+
+form h2 {
+    padding-bottom: 2em;
+}
+
+form .field {
+    display: flex;
+    flex-direction: column;
+}
+
+form .field label {
+    order: -1;
+    font-weight: bold;
+}
+
+form .field .example {
+    color: #666666;
+    font-style: italic;
+    font-weight: 500;
+}
+
+form .field input, form .field textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+
+    border-bottom: 2px solid #DDD;
+    font-size: 1.2em;
+    line-height: 1;
+    
+    &:focus {
+        border-color: lightseagreen;
+    }
+}
+
+form .field:has(input:focus) label,  form .field:has(textarea:focus) label{
+    color: lightseagreen;
+}
+
+form input[type="submit"] {
+    border: none;
+    font-weight: bold;
+    padding: 1em;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: lightseagreen;
+    color: white;
+}
