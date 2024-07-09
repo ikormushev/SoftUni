@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i|PT+Serif:400,400i,700,700i&amp;display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 20px/1.5 "PT Sans", sans-serif;
+}
+
+
+header {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 2em 15em 5em 15em;
+    gap: 7em;
+    position: relative;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 0.7;
+    z-index: -1;
+}
+
+
+header .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .top .image {
+    width: 6em;
+    height: 3em;
+    display: block;
+}
+
+header .top .image img {
+    width: 100%;
+    height: auto;
+}
+
+header .top .main-nav {
+    display: flex;
+    gap: 1em;
+}
+
+header .top .main-nav li {
+    list-style-type: none;
+}
+
+header .top .main-nav li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+header .top .main-nav li a:hover {
+    color: #008080;
+}
+
+header .bottom {
+    text-align: center;
+}
+
+header .bottom h1 {
+    font-size: 3em;
+    padding-bottom: 0.5em;
+}
+
+header .bottom .intro-text {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    padding-bottom: 1em;
+    font-size: 1.3em;
+}
+
+header .bottom a {
+    text-decoration: none;
+    color: #686666;
+    font-weight: bold;
+    background-color: #E7EEF0;
+    padding: 0.5em 0.7em;
+    border-radius: 0.3em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+main > div {
+    padding: 2em 4em;
+}
+
+main > div:nth-child(odd) {
+    background-color: #60ACC1;
+}
+
+main .c1 .c1-info {
+    text-align: center;
+    padding-bottom: 2em;
+}
+
+main .c1 .c1-images {
+    display: flex;
+    gap: 7em;
+    justify-content: space-around;
+}
+
+main .c1 .c1-images .image {
+    display: flex;
+    border-right: 10px solid #60ACC1;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.8);
+    overflow: hidden;
+    width: 30em;
+}
+
+main .c1 .c1-images .image .media {
+    overflow: hidden;
+    position: relative;
+    flex: 0 0 50%;
+}
+
+main .c1 .c1-images .image .media img {
+    position: absolute;
+    height: auto;
+    width: 170%;
+    display: block;
+}
+
+main .c1 .c1-images .image .image-text {
+    background-color: white;
+    padding: 2em;
+    flex: 0 0 50%;
+}
+
+main .c1 .c1-images .image .image-text h4 {
+    text-align: center;
+    font-size: 1em;
+}
+
+main .furnitures {
+    display: flex;
+    gap: 5em;
+}
+
+main .furnitures .furniture {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: center;
+    text-align: center;
+}
+
+main .furnitures .furniture img {
+    width: 6em;
+    height: 6em;
+}
+
+main .c2 .c2-info {
+    text-align: center;
+    padding-bottom: 1.5em;
+}
+
+main .c2 .c2-info p {
+    font-style: italic;
+}
+
+main .c2 .c2-images {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+main .c2 .c2-images img {
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.8);
+    width: 350px;
+    height: 250px;
+}
+
+main .about-us {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .about-us .title {
+    padding-bottom: 2em;
+}
+
+main .about-us .title h3 {
+    color: #6E686B;
+}
+
+main .about-us .title p {
+    color: #7F686B;
+    font-style: italic;
+}
+
+main .about-us > p {
+    color: #7F686B;
+    max-width: 100ch;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    background-color: #2D333C;
+    color: white;
+    padding: 1em;
+}
