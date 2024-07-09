@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 16px/1.5 'Gochi Hand', sans-serif;
+}
+
+body, input, textarea, button {
+    font: inherit;
+}
+
+body {
+    padding: 2em;
+    background-color: #e0e0e0;
+}
+
+.postcard {
+    margin: 0 auto;
+    border-radius: 1.5em;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    gap: 1em;
+    background-color: white;
+}
+
+header {
+    position: relative;
+    height: 530px;
+    display: flex;
+    align-items: flex-end;
+    margin: 1.5em 1.5em 0.5em 1.5em;
+    overflow: hidden;
+
+    box-shadow: 0 4px 4px rgb(0,0,0, 0.1);
+}
+
+.postcard .media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 1em 1em 0 0;
+}
+
+.postcard .media img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.postcard .text {
+    background-color: white;
+    text-align: center;
+    padding: 1em;
+    border-radius: 0.3em;
+    margin: 1em;
+    z-index: 2;
+}
+
+.postcard .text h2 {
+    color: #333333;
+    padding-bottom: 0.3em;
+}
+
+.postcard .text p {
+    color: #66666a;
+    font-weight: 550;
+}
+
+.postcard footer {
+    border-top: 1.5px solid #cccccc;
+    padding: 1.5em 0 1.5em 2.5em;
+}
+
+.postcard footer h2 {
+    padding-bottom: 0.5em;
+}
+
+.postcard footer p {
+    color: #6f6666;
+    font-weight: 500;
+}
