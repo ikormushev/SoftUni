@@ -10,7 +10,7 @@ def set_delivery_and_warranty(apps, schema_editor):
 
     for o in orders:
         if o.status == 'Pending':
-            o.delivery = o.order_date = timezone.timedelta(days=3)
+            o.delivery = o.order_date + timezone.timedelta(days=3)
         elif o.status == 'Completed':
             o.warranty = "24 months"
         elif o.status == "Cancelled":
