@@ -1,0 +1,193 @@
+body {
+    max-width: 1100px;
+    margin: auto;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    padding: 1.5em;
+}
+
+.product-image {
+    float: left;
+    width: 20%;
+}
+  
+.product-details {
+    float: left;
+    width: 37%;
+}
+  
+.product-price {
+    float: left;
+    width: 12%;
+}
+  
+.product-add {
+    float: left;
+    width: 9%;
+}
+  
+.product-line-price {
+    float: left;
+    width: 12%;
+    text-align: right;
+}
+  
+/* Apply dollar signs */
+.product .product-line-price:before {
+    content: '$';
+}
+
+/* Product entries */
+.product {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+}
+
+.product .product-image {
+    text-align: center;
+}
+
+.product .product-image img {
+    width: 100px;
+}
+.product .product-details .product-title {
+    margin-right: 20px;
+    font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
+}
+.product .product-details .product-description {
+    margin: 5px 20px 5px 0;
+    line-height: 1.4em;
+}
+
+.product .add-product {
+    border: 0;
+    padding: 4px 8px;
+    background-color: rgb(153, 202, 153);
+    color: #fff;
+    font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+  
+/* Totals section */
+#checkoutButton, #productAdd {
+    float: right;
+    border: 0;
+    padding: 6px 25px;
+    background-color: #6b6;
+    color: #fff;
+    font-size: 25px;
+    border-radius: 3px;
+}
+  
+#checkoutButton:hover, 
+#productAdd:hover, 
+.product .add-product:hover, 
+.tableDiv table tbody tr td.countCol button:hover  {
+    background-color: #494;
+}
+  
+#checkoutField {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    resize: none;
+    font-size: 22px;
+}
+
+/* Products*/
+#products {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+/* Product Addition */
+hr {
+    margin: 1em 0 1em 0;
+}
+
+.productAddition {
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+
+}
+
+.productAddition .required {
+    display: flex;
+    justify-content: space-between;
+}
+.productAddition .description {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.productAddition input {
+    border: 2px solid gray;
+    border-radius: 0.3em;
+    font-size: 1.2em;
+}
+
+.productAddition .description textarea, .checkout textarea {
+    border: 2px solid gray;
+    border-radius: 0.3em;
+    resize: none;
+    font-size: 1.5em;
+}
+
+/* Checkout div */
+.checkout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tableDiv table {
+    background-color: aliceblue;
+    border: 2px solid gray;
+    border-radius: 0.3em;
+    padding: 0.5em;
+}
+
+.tableDiv table thead th:not(:last-child) {
+    padding-right: 5em;
+}
+
+.tableDiv table thead th {
+    padding-bottom: 1em;
+}
+
+.delButton button {
+    margin-left: 1em;
+    background-color: red;
+    color: white;
+    border-radius: 0.3em;
+    border: 1px solid black;
+    content: "x";
+}
+
+.delButton button:hover {
+    background-color: white;
+    color: red;
+}
+
+.tableDiv table tbody tr td.countCol {
+    display: flex;
+    gap: 0.5em;
+    align-items: baseline;
+}
+
+.tableDiv table tbody tr td.countCol button {
+    border: 0;
+    background-color: #6b6;
+    color: #fff;
+    border-radius: 3px;
+}

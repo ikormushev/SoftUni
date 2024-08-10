@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All-In-One</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="validate()">
+    <h1>Shopping Cart</h1>
+    <div class="shopping-cart">
+        <div id="products">
+
+        </div>
+
+        <div class="productAddition">
+
+            <div class="required">
+                <div class="title">
+                    <label for="productTitle">Enter name for product:</label>
+                    <input type="text" id="productTitle"/>
+                </div>
+
+                <div class="price">
+                    <label for="productPrice">Enter price for product:</label>
+                    <input type="text" id="productPrice"/>
+                </div>
+            </div>
+
+            <div class="description">
+                <label for="productDescription">Enter description for product:</label>
+                <textarea id="productDescription" rows="5" cols="20"></textarea>
+            </div>
+
+            <button id="productAdd" onclick="createProduct()">Create Product</button>
+        </div>
+
+        <hr>
+
+        <div class="checkout">
+            <h3>Here you can see your checkout:</h1>
+                <div class="tableDiv">
+                    <table>
+                        <thead>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Count</th>
+                        </thead>
+        
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="totalPrice">
+                    <h3>Total price is $<span>0.00</span>.</h3>
+                </div>
+            <button id="checkoutButton" onclick="checkout()">Checkout</button>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
