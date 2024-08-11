@@ -249,6 +249,8 @@ function checkout() {
     let checkoutTableBody = document.querySelectorAll(".tableDiv table tbody tr");
     checkoutTableBody.forEach(x => x.remove());
     checkoutProducts = {};
+    let totalPriceEl = document.querySelector('.totalPrice span');
+    totalPriceEl.textContent = 0;
 
     // Add the checkout
     let shoppingCartEl = document.querySelector('.checkout');
