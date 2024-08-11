@@ -1,3 +1,8 @@
+// Simulating a Database
+let products = {};
+let checkoutProducts = {};
+let totalCheckoutPrice = 0;
+
 // Validate & Check Functions
 function validateInput(inputEl, inputType) {
     let productTitlePattern = /^[a-zA-Z]+$/;
@@ -36,16 +41,6 @@ function validate() {
     });
 }
 
-function doesProductExist(productTitle) {
-    let products = document.querySelectorAll('.product .product-details .product-title');
-
-    for (let productT of products) {
-        if (productT.textContent === productTitle) return true;
-    }
-
-    return false;
-}
-
 // Create a product
 function createProduct() {
     let productTitle = document.getElementById('productTitle');
@@ -53,11 +48,13 @@ function createProduct() {
     let productDescriptionValue = document.getElementById('productDescription').value;
     let productsCount = document.querySelectorAll('.product').length;
 
-    if (!validateInput(productTitle, 'name') || !validateInput(productPrice, 'price') ) {
-        return;
-    }
+    if (!validateInput(productTitle, 'name') || !validateInput(productPrice, 'price') ) return;
 
-    if (doesProductExist(productTitle.value)) return;
+    if (Object.keys(products).includes(productTitle.value)) return;
+
+
+    products[productTitle.value] = {};
+    products[productTitle.value]["price"] = Number(productPrice.value);
 
     // Product Element
     let productEl = document.createElement('div');
@@ -126,27 +123,26 @@ function createProduct() {
 function addToCheckout(productId) {
     let wantedProduct = document.getElementById(productId);
     let productAddToCheckoutButton = wantedProduct.querySelector('.add-product');
+    let totalPriceEl = document.querySelector('.totalPrice span');
 
     let productTitle = wantedProduct.querySelector('.product-title').textContent;
     let productPrice = Number(wantedProduct.querySelector('.product-line-price').textContent);
 
     productAddToCheckoutButton.addEventListener('click', () => {
-        let checkoutTableBody = document.querySelector(".tableDiv table tbody");
-
-        let productsAdded = checkoutTableBody.querySelectorAll('tr');
-
-        for (let product of productsAdded) {
-            let currProductName = product.querySelector('td.productNameCol');
-            if (currProductName.textContent === productTitle) {
-                let productIncreaseButton = product.querySelector('td button.increaseButton');
-                productIncreaseButton.click();
-                return;
-            }
+        if (checkoutProducts.hasOwnProperty(productTitle)) {
+            let increaseButton = document.querySelector('.increaseButton');
+            increaseButton.click();
+            return;
         }
 
+        checkoutProducts[productTitle] = {};
+        checkoutProducts[productTitle]["count"] = 1;
+        checkoutProducts[productTitle]["price"] = productPrice;
+        totalCheckoutPrice += productPrice;
+        totalPriceEl.textContent = totalCheckoutPrice.toFixed(2);
+
+        let checkoutTableBody = document.querySelector(".tableDiv table tbody");
         let newRow = document.createElement('tr');
-        let totalPriceEl = document.querySelector('.totalPrice span');
-        totalPriceEl.textContent = (Number(totalPriceEl.textContent) + productPrice).toFixed(2);
 
         // Create the columns
         // Name Column
@@ -167,43 +163,52 @@ function addToCheckout(productId) {
         productCountButtonDecrease.textContent = "-";
 
         let productCountSpanEl = document.createElement('span');
-        productCountSpanEl.textContent = "1";
+        productCountSpanEl.textContent = checkoutProducts[productTitle]["count"];
 
         let productCountButtonIncrease = document.createElement('button');
         productCountButtonIncrease.classList.add('increaseButton');
         productCountButtonIncrease.textContent = "+";
 
-        productCountButtonDecrease.addEventListener('click', () => {
-            let currentValue = Number(productCountSpanEl.textContent);
-
-            if (currentValue > 1) {
-                let startPrice = Number(productPriceCol.textContent) / currentValue;
-                currentValue--;
-                productCountSpanEl.textContent = currentValue;
-
-                let newPrice = currentValue * startPrice;
-                productPriceCol.textContent = (newPrice).toFixed(2);
-                totalPriceEl.textContent = (Number(totalPriceEl.textContent) - startPrice).toFixed(2);
-            }
-        });
-
-        productCountButtonIncrease.addEventListener('click', () => {
-            let currentValue = Number(productCountSpanEl.textContent);
-
-            if (currentValue < 100) {
-                let startPrice = Number(productPriceCol.textContent) / currentValue;
-                currentValue++;
-                productCountSpanEl.textContent = currentValue;
-
-                let newPrice = currentValue * startPrice;
-                productPriceCol.textContent = (newPrice).toFixed(2);
-                totalPriceEl.textContent = (Number(totalPriceEl.textContent) + startPrice).toFixed(2);
-            }
-        });
 
         productCountCol.appendChild(productCountButtonDecrease);
         productCountCol.appendChild(productCountSpanEl);
         productCountCol.appendChild(productCountButtonIncrease);
+
+        productCountButtonDecrease.addEventListener('click', () => {
+            let currCount = checkoutProducts[productTitle]["count"];
+        
+            let currCountEl = document.querySelector('.countCol span');
+            let currPriceEl = document.querySelector('.productPriceCol');
+
+            if (currCount > 1) {
+                checkoutProducts[productTitle]["count"]--;
+                checkoutProducts[productTitle]["price"] -= productPrice;
+                totalCheckoutPrice -= productPrice;
+
+                currCountEl.textContent = checkoutProducts[productTitle]["count"];
+                currPriceEl.textContent = checkoutProducts[productTitle]["price"].toFixed(2);
+
+                totalPriceEl.textContent = totalCheckoutPrice.toFixed(2);
+            }
+        });
+
+        productCountButtonIncrease.addEventListener('click', () => {
+            let currCount = checkoutProducts[productTitle]["count"];
+        
+            let currCountEl = document.querySelector('.countCol span');
+            let currPriceEl = document.querySelector('.productPriceCol');
+
+            if (currCount < 100) {
+                checkoutProducts[productTitle]["count"]++;
+                checkoutProducts[productTitle]["price"] += productPrice;
+                totalCheckoutPrice += productPrice;
+
+                currCountEl.textContent = checkoutProducts[productTitle]["count"];
+                currPriceEl.textContent = checkoutProducts[productTitle]["price"].toFixed(2);
+
+                totalPriceEl.textContent = totalCheckoutPrice.toFixed(2);
+            }
+        });
 
         // Delete Button Col
         let productDelButtonDiv = document.createElement('td');
@@ -211,7 +216,9 @@ function addToCheckout(productId) {
         let productDelButton = document.createElement('button');
         productDelButton.textContent = "X";
         productDelButton.addEventListener('click', () => {
-            totalPriceEl.textContent = (Number(totalPriceEl.textContent) - Number(productPriceCol.textContent)).toFixed(2);
+            totalCheckoutPrice -= checkoutProducts[productTitle]["price"];
+            totalPriceEl.textContent = totalCheckoutPrice.toFixed(2);
+            delete checkoutProducts[productTitle];
             newRow.remove();
         });
         productDelButtonDiv.appendChild(productDelButton);
@@ -229,28 +236,21 @@ function addToCheckout(productId) {
 
 // Checkout Button Function
 function checkout() {
-    let checkoutTableBody = document.querySelectorAll(".tableDiv table tbody tr");
-    let products = {};
-    let totalPrice = document.querySelector('.totalPrice span').textContent;
-
-    if (Number(totalPrice) === 0.00) {
+    if (totalCheckoutPrice === 0.00) {
         return;
     }
 
-    for (let row of checkoutTableBody) {
-        let productNameEl = row.querySelector('td.productNameCol');
-        let productCountEl = row.querySelector('td.countCol span');
+    let resultString = Object.entries(checkoutProducts).map(x => `${x[0]} x${x[1]['count']}`).join(', ');
 
-        let productName = productNameEl.textContent;
-        let productCount = Number(productCountEl.textContent);
+    let result = `You have successfully purchased ${resultString} for $${totalCheckoutPrice.toFixed(2)}.`;
 
-        products[productName] = productCount;
-    }
-    console.log(Object.entries(products));
-    let resultString = Object.entries(products).map(x => `${x[0]} x${x[1]}`).join(', ');
+    // Empty old values
+    totalCheckoutPrice = 0;
+    let checkoutTableBody = document.querySelectorAll(".tableDiv table tbody tr");
+    checkoutTableBody.forEach(x => x.remove());
+    checkoutProducts = {};
 
-    let result = `You have successfully purchased ${resultString} for $${totalPrice}.`;
-
+    // Add the checkout
     let shoppingCartEl = document.querySelector('.checkout');
     let resultEl = document.createElement('h3');
     resultEl.textContent = result;
